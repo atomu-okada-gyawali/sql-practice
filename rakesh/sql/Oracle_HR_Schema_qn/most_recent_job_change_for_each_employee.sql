@@ -26,7 +26,7 @@ select
     d.department_name
 from
     recent_job rj
-inner join oehr_job_history jh on rj.employee_id = jh.employee_id 
+    inner join oehr_job_history jh on rj.employee_id = jh.employee_id
     and jh.start_date = rj.last_job_start_date
-inner join oehr_jobs j on j.job_id = jh.job_id
-left join oehr_departments d on d.department_id = jh.department_id;
+    inner join oehr_jobs j on j.job_id = jh.job_id
+    left join oehr_departments d on d.department_id = jh.department_id;
